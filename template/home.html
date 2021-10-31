@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block home %}active text-dark{% endblock home %}
+
+{% block body %}
+<div id="carouselExampleCaptions" class="carousel slide container align-item-center w-75" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+        <a href="/oxygen"><img src="{% static 'img/mmm.jpg' %}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Healthy Habits</h5>
+        <p>5 things to do in morning.Click to know more..</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <a href="/winter"><img src="{% static 'img/winter.jpg' %}" class="d-block w-100" alt="..."></a>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>10 amazing places to visit this winter</h5>
+        <p>These winter plan a amazing trip. Click to view more</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+        <a href="/jungle"><img src="{% static 'img/jung.jpg' %}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Oxygen</h5>
+        <p>Is world is running out of Oxygen.Click to know more..</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+{% endblock body %}
