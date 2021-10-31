@@ -9,7 +9,7 @@ def blog(request):
         desc = request.POST['desc']
         # inss = requestblog(topic=topic,desc=desc)
         # inss.save()
-        print(topic,desc)
+        # print(topic,desc)
 
     return render(request,'blog.html')
 def blogpost(request,slug):
@@ -21,9 +21,9 @@ def contact(request):
         email = request.POST['email']
         queries = request.POST['queries']
 
-        # ins = Contact(first=first,last=last,email=email,queries= queries)
-        # ins.save()
-        print(first ,last,email,queries)
+        ins = Contact(first=first,last=last,email=email,queries= queries)
+        ins.save()
+        # print(first ,last,email,queries)
 
     return render(request,'contact.html')
 def winter(request):

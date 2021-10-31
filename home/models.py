@@ -13,5 +13,7 @@ class Contact(models.Model):
 class requestblog(models.Model):
     topic = models.CharField(max_length=50)
     desc = models.TextField()
+    def __str__(self) :
+        return self.topic
 
 
