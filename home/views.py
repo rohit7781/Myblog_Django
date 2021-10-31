@@ -7,8 +7,8 @@ def blog(request):
     if request.method=='POST':
         topic = request.POST['topic']
         desc = request.POST['desc']
-        # inss = requestblog(topic=topic,desc=desc)
-        # inss.save()
+        inss = requestblog(topic=topic,desc=desc)
+        inss.save()
         # print(topic,desc)
 
     return render(request,'blog.html')
