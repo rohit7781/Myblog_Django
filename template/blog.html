@@ -6,7 +6,7 @@
 {% block body %}
  {% if successful %}
   <div class="alert alert-success alert-dismissible fade show" role="alert">
-  <strong>Your form has been submitted successfully.</strong>
+  <strong>Your Blog Request has been submitted successfully.</strong>
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
  {% endif %}
@@ -15,7 +15,7 @@
     <h2 class="text-center">Request a Blog</h2>
     <form action="/blog/" method="post">
       {% csrf_token %} 
-        <div class="mb-3>
+        <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Topic</label>
           <input type="text" class="form-control mb-3" id="exampleInputEmail1" name="topic">
         </div>
@@ -27,8 +27,29 @@
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
  </div>
-
-
-
+    <div class="container my-3 w-75">
+        <h2>Recent Blogs</h2>
+      {% for b in blogs %}
+      <div class="d-flex align-items-center my-5 bn00">
+        <!-- <div class="flex-shrink-0">
+          <img src="..." alt="...">
+        </div> -->
+        <div class="flex-grow-1 ms-3">
+          <h4><strong>{{b.title}}</strong></h4>
+        <p>{{b.shortdesc}}</p>
+        <div>
+          <a href="/blogpost/{{b.slug}}" class="btn btn-primary" role="button">Read more</a>
+        </div>
+          <h6>Published on - {{b.time}}</h6>
+        </div>
+      </div>
+      <!-- {{b.sno}}
+      {{b.title}}
+      {{b.time}}
+      <br> -->
+      {% endfor %}
+      
+    </div>
+      
 
 {% endblock body %}

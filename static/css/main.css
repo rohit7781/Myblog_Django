@@ -1,3 +1,10 @@
+*{
+  text-decoration: none;
+}
+
+.bn00{
+  background-color: antiquewhite;
+}
 .footer-basic {
     padding:40px 0;
     background-color:rgb(71, 73, 73);
